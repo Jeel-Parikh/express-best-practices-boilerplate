@@ -16,16 +16,13 @@ ExpressJs-Best-Practices-Boilerplate is a boilerplate for building ExpressJs app
    npx bootstrap-express-app my-app
    cd my-app
    ```
-2. **Create Environment File:** </br>
-   Create a .env file in the root directory of project and set the required environment variables. Refer to the provided .env.local for reference.
-
-3. **Start Project:** </br>
+2. **Start Project:** </br>
    ```bash
    npm start
    ```
-4. **Import Postman Collection:** </br>
-- Find the Postman collection in the "postman collection doc" folder.
-- Import Postman collection JSON file from postman
+3. **Import Postman Collection:** </br>
+   - Find the Postman collection in the "postman collection doc" folder.
+   - Import Postman collection JSON file from postman
 ## Usage
 ### Development Environment:
 To start the server in the local environment
