@@ -1,9 +1,9 @@
 {
-  "name": "bootstrap-node-app",
-  "version": "1.0.0",
-  "description": "Generate a boilerplate for a Node.js Express and MongoDB CRUD application with best practices.",
+  "name": "bootstrap-express-app",
+  "version": "1.0.1",
+  "description": "Generate a boilerplate for a NodeJs Express and MongoDB CRUD application with best practices.",
   "bin": {
-    "bootstrap-node-app": "bin/create-node-app.js"
+    "bootstrap-express-app": "bin/create-express-app.js"
   },
   "contributors": [
     {
@@ -20,7 +20,10 @@
     "nodejs-best-practices-boilerplate",
     "express",
     "mongodb",
-    "crud"
+    "crud",
+    "bootstrap-express-app",
+    "create-express-app",
+    "express-app"
   ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -57,8 +60,8 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jeel-parikh1/nodejs-best-practices.git"
+    "url": "git+https://github.com/Jeel-Parikh/express-best-practices-boilerplate.git"
   },
-  "homepage": "https://github.com/jeel-parikh1/nodejs-best-practices#readme",
+  "homepage": "https://github.com/Jeel-Parikh/express-best-practices-boilerplate.git#readme",
   "license": "ISC"
 }

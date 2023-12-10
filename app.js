@@ -34,6 +34,10 @@ app.use("/api", indexRoute);
 
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
+app.get("/", (req, res) => {
+    res.send("Welcome to Express App")
+})
+
 app.use("*", (req, res, next) => {
     next(new CustomError(httpStatusCodes["Not Found"], "Not found"))
 })
