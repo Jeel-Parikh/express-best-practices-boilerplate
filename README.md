@@ -1,7 +1,7 @@
-# NodeJs-Best-Practices-Boilerplate
+# ExpressJs-Best-Practices-Boilerplate
 
 ## Introduction
-NodeJs-Best-Practices is a boilerplate for building Node.js applications with basic user CRUD and login/logout functionality. It uses the Express framework and MongoDB for database storage.
+ExpressJs-Best-Practices-Boilerplate is a boilerplate for building ExpressJs applications with basic user CRUD and login/logout functionality. It uses the Express framework and MongoDB for database storage.
 
 
 ## Prerequisites
@@ -13,7 +13,7 @@ NodeJs-Best-Practices is a boilerplate for building Node.js applications with ba
 ## Installation
 1. **Initialization command:**
    ```bash
-   npx bootstrap-node-app my-app
+   npx bootstrap-express-app my-app
    cd my-app
    ```
 2. **Create Environment File:** </br>
