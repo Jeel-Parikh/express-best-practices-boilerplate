@@ -50,3 +50,8 @@ Thumbs.db
 *.mov
 *.wmv
 
+# Public folder Image files 
+*.jpg
+*.png
+*.jpeg
+*.gif
