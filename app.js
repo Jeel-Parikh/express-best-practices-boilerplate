@@ -4,6 +4,7 @@ import helmet from "helmet";
 import cookieParser from "cookie-parser";
 import cors from "cors"
 import swaggerUi from 'swagger-ui-express';
+import path from "node:path"
 
 import indexRoute from "./modules/index.js"
 import { CustomError, httpStatusCodes } from "./constants/constants.js";
@@ -27,6 +28,8 @@ app.use(express.json()) // used to handle JSON payloads in HTTP requests
 app.use(express.urlencoded({ extended: true })) // handling form data submitted from web pages
 
 app.use(logger("dev"))  // Log REST APIs call in console
+
+app.use(express.static(path.resolve("public"))) // To access static files
 
 await connectMongo();
 

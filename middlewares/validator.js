@@ -5,7 +5,6 @@ const validator = (schema) => {
     const validatorMiddleware = (req, res, next) => {
         try {
             let data
-            console.log(req.body.userEmail)
             data = schema.validate({ ...req.body, ...req.params })
             if (data.error) {
                 throw new CustomError(httpStatusCodes["Bad Request"], data.error)
