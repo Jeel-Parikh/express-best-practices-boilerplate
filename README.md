@@ -20,9 +20,23 @@ ExpressJs-Best-Practices-Boilerplate is a boilerplate for building ExpressJs app
    ```bash
    npm start
    ```
-3. **Import Postman Collection:** </br>
+## Documentation
+### Postman Collection:
    - Find the Postman collection in the "postman collection doc" folder.
    - Import Postman collection JSON file from postman
+
+### Swagger Documentation:
+1. **Create command:**
+   - After adding inline documentation comments and schemas to newly created or modified endpoint routes, run the following command to generate the Swagger documentation JSON file.
+      ```bash
+      npm run create-swagger-doc
+      ```
+   - For Inline documentation comments and schemas 
+   <a href="https://swagger-autogen.github.io/docs">click here </a>
+
+2. **Usage:**
+   - For Swagger documentation, first, start the server and navigate to the '/api-docs' route. Ex. **http://localhost:3000/api-docs**
+
 ## Usage
 ### Development Environment:
 To start the server in the local environment
