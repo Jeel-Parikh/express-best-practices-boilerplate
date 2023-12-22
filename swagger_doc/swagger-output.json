@@ -22,6 +22,16 @@
     }
   ],
   "paths": {
+    "/": {
+      "get": {
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/v1/auth/login": {
       "post": {
         "tags": [
@@ -41,6 +51,19 @@
                 "$ref": "#/components/schemas/login"
               }
             }
+          }
+        }
+      }
+    },
+    "/api/v1/auth/refresh_token": {
+      "post": {
+        "tags": [
+          "Auth"
+        ],
+        "description": "",
+        "responses": {
+          "default": {
+            "description": ""
           }
         }
       }

@@ -9,11 +9,15 @@ const config = {
     PORT: process.env.PORT,
     MONGO_URI: process.env.MONGO_URI,
     SALT_ROUND: process.env.SALT_ROUND,
-    TOKEN_EXPIRES: process.env.TOKEN_EXPIRES,
-    TOKEN_SECRET: process.env.TOKEN_SECRET,
-    COOKIE_EXPIRE_TIME: process.env.COOKIE_EXPIRE_TIME,   // In Minutes
     RATE_LIMIT_TIME: process.env.RATE_LIMIT_TIME,    // In Minutes
-    RATE_LIMIT_REQUEST: process.env.RATE_LIMIT_REQUEST
+    RATE_LIMIT_REQUEST: process.env.RATE_LIMIT_REQUEST,
+    ACCESS_TOKEN_SECRET: process.env.ACCESS_TOKEN_SECRET,
+    ACCESS_TOKEN_EXPIRES: process.env.ACCESS_TOKEN_EXPIRES,
+    ACCESS_TOKEN_COOKIE_EXPIRE_TIME: process.env.ACCESS_TOKEN_COOKIE_EXPIRE_TIME,   //  In Minutes
+    REFRESH_TOKEN_SECRET: process.env.REFRESH_TOKEN_SECRET,
+    REFRESH_TOKEN_EXPIRES: process.env.REFRESH_TOKEN_EXPIRES,
+    REFRESH_TOKEN_COOKIE_EXPIRE_TIME: process.env.REFRESH_TOKEN_COOKIE_EXPIRE_TIME,  //  In Minutes
+    DB_TOKEN_EXPIRES: process.env.DB_TOKEN_EXPIRES  //  In Minutes
 }
 
 // ===============  CORS options   ===============

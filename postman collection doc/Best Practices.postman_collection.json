@@ -28,9 +28,9 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{local_base_url}}/user?userName=Jeel&userRole=admin&userGender&userEmail&page&limit",
+							"raw": "{{local_base_url}}{{version_url}}/user",
 							"host": [
-								"{{local_base_url}}"
+								"{{local_base_url}}{{version_url}}"
 							],
 							"path": [
 								"user"
@@ -38,27 +38,33 @@
 							"query": [
 								{
 									"key": "userName",
-									"value": "Jeel"
+									"value": "Jeel",
+									"disabled": true
 								},
 								{
 									"key": "userRole",
-									"value": "admin"
+									"value": "admin",
+									"disabled": true
 								},
 								{
 									"key": "userGender",
-									"value": null
+									"value": null,
+									"disabled": true
 								},
 								{
 									"key": "userEmail",
-									"value": null
+									"value": null,
+									"disabled": true
 								},
 								{
 									"key": "page",
-									"value": null
+									"value": null,
+									"disabled": true
 								},
 								{
 									"key": "limit",
-									"value": null
+									"value": null,
+									"disabled": true
 								}
 							]
 						},
@@ -83,9 +89,9 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{local_base_url}}/user/655dda331390743579bccf3f",
+							"raw": "{{local_base_url}}{{version_url}}/user/655dda331390743579bccf3f",
 							"host": [
-								"{{local_base_url}}"
+								"{{local_base_url}}{{version_url}}"
 							],
 							"path": [
 								"user",
@@ -113,9 +119,9 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{local_base_url}}/user/me",
+							"raw": "{{local_base_url}}{{version_url}}/user/me",
 							"host": [
-								"{{local_base_url}}"
+								"{{local_base_url}}{{version_url}}"
 							],
 							"path": [
 								"user",
@@ -152,9 +158,9 @@
 							}
 						},
 						"url": {
-							"raw": "{{local_base_url}}/user",
+							"raw": "{{local_base_url}}{{version_url}}/user",
 							"host": [
-								"{{local_base_url}}"
+								"{{local_base_url}}{{version_url}}"
 							],
 							"path": [
 								"user"
@@ -190,9 +196,9 @@
 							}
 						},
 						"url": {
-							"raw": "{{local_base_url}}/user/me",
+							"raw": "{{local_base_url}}{{version_url}}/user/me",
 							"host": [
-								"{{local_base_url}}"
+								"{{local_base_url}}{{version_url}}"
 							],
 							"path": [
 								"user",
@@ -229,9 +235,9 @@
 							}
 						},
 						"url": {
-							"raw": "{{local_base_url}}/user/655dda331390743579bccf3f",
+							"raw": "{{local_base_url}}{{version_url}}/user/655dda331390743579bccf3f",
 							"host": [
-								"{{local_base_url}}"
+								"{{local_base_url}}{{version_url}}"
 							],
 							"path": [
 								"user",
@@ -268,9 +274,9 @@
 							}
 						},
 						"url": {
-							"raw": "{{local_base_url}}/user/655dd354efb89b64d0073e52",
+							"raw": "{{local_base_url}}{{version_url}}/user/655dd354efb89b64d0073e52",
 							"host": [
-								"{{local_base_url}}"
+								"{{local_base_url}}{{version_url}}"
 							],
 							"path": [
 								"user",
@@ -301,13 +307,40 @@
 							}
 						},
 						"url": {
-							"raw": "{{local_base_url}}/auth/login",
+							"raw": "{{local_base_url}}{{version_url}}/auth/login",
 							"host": [
-								"{{local_base_url}}"
+								"{{local_base_url}}{{version_url}}"
 							],
 							"path": [
 								"auth",
 								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Refresh Token",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"userEmail\":\"jeel@gmail.com\",\n    \"userPassword\":\"12345\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local_base_url}}{{version_url}}/auth/refresh_token",
+							"host": [
+								"{{local_base_url}}{{version_url}}"
+							],
+							"path": [
+								"auth",
+								"refresh_token"
 							]
 						}
 					},
@@ -328,9 +361,9 @@
 							}
 						},
 						"url": {
-							"raw": "{{local_base_url}}/auth/logout",
+							"raw": "{{local_base_url}}{{version_url}}/auth/logout",
 							"host": [
-								"{{local_base_url}}"
+								"{{local_base_url}}{{version_url}}"
 							],
 							"path": [
 								"auth",
@@ -341,6 +374,20 @@
 					"response": []
 				}
 			]
+		},
+		{
+			"name": "Welcome",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{local_base_url}}",
+					"host": [
+						"{{local_base_url}}"
+					]
+				}
+			},
+			"response": []
 		}
 	],
 	"event": [
@@ -366,7 +413,12 @@
 	"variable": [
 		{
 			"key": "local_base_url",
-			"value": "http://localhost:3000/api/v1"
+			"value": "http://localhost:3000"
+		},
+		{
+			"key": "version_url",
+			"value": "/api/v1",
+			"type": "string"
 		}
 	]
 }

@@ -19,6 +19,9 @@ route.post("/login",
         } 
     */
     validator(authValidatorSchema.loginSchema), controller.login);
+
+route.post("/refresh_token", controller.refreshToken);
+
 route.post("/logout", controller.logout);
 
 export default route;

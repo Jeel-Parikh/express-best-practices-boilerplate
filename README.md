@@ -20,9 +20,23 @@ ExpressJs-Best-Practices-Boilerplate is a boilerplate for building ExpressJs app
    ```bash
    npm start
    ```
-3. **Import Postman Collection:** </br>
+## Documentation
+### Postman Collection:
    - Find the Postman collection in the "postman collection doc" folder.
    - Import Postman collection JSON file from postman
+
+### Swagger Documentation:
+1. **Create command:**
+   - After adding inline documentation comments and schemas to newly created or modified endpoint routes, run the following command to generate the Swagger documentation JSON file.
+      ```bash
+      npm run create-swagger-doc
+      ```
+   - For Inline documentation comments and schemas 
+   <a href="https://swagger-autogen.github.io/docs">click here </a>
+
+2. **Usage:**
+   - For Swagger documentation, first, start the server and navigate to the '/api-docs' route. Ex. **http://localhost:3000/api-docs**
+
 ## Usage
 ### Development Environment:
 To start the server in the local environment
@@ -60,6 +74,15 @@ To stop all instances of the production environment
    ```
 </li>
 </ul>
+
+## Authentication Flow
+   - When a user logs in with valid credentials, the server sends both an access token and a refresh token as cookies.
+   - All protected routes require token validation for access.
+   - If a protected route returns a status code of 401 (Unauthorized), the client needs to send a request to the '/auth/refresh_token' endpoint.
+   - The '/auth/refresh_token' endpoint validates the refresh token, and if valid, generates a new pair of access and refresh tokens.
+   - If the refresh token is not valid, an error response with a status code of 401 is sent, requiring the user to log in again.
+
+      <img src="https://drive.google.com/uc?export=view&id=17H5R6v_sm20jFs98-nN-MzCxnzwHi_Re" alt="Not found"></img>
 
 ## Git Best Practices
 
