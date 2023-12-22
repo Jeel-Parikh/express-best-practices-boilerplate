@@ -4,7 +4,6 @@
 #     https://www.atlassian.com/git/tutorials/saving-changes/gitignore
 
 # Node artifact files
-chatAPP flow.txt
 .env
 node_modules/
 dist/

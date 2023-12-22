@@ -75,6 +75,15 @@ To stop all instances of the production environment
 </li>
 </ul>
 
+## Authentication Flow
+   - When a user logs in with valid credentials, the server sends both an access token and a refresh token as cookies.
+   - All protected routes require token validation for access.
+   - If a protected route returns a status code of 401 (Unauthorized), the client needs to send a request to the '/auth/refresh_token' endpoint.
+   - The '/auth/refresh_token' endpoint validates the refresh token, and if valid, generates a new pair of access and refresh tokens.
+   - If the refresh token is not valid, an error response with a status code of 401 is sent, requiring the user to log in again.
+
+      <img src="https://drive.google.com/uc?export=view&id=17H5R6v_sm20jFs98-nN-MzCxnzwHi_Re" alt="Not found"></img>
+
 ## Git Best Practices
 
 ### Commit Standards
